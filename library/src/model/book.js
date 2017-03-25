@@ -1,19 +1,13 @@
-/***********************************************
-***  Constructor with attribute definitions  ***
-************************************************/
+
+
 function Book( slots) {
   this.isbn = slots.isbn;
   this.title = slots.title;
   this.year = slots.year;
 };
-/***********************************************
-***  Class-level ("static") properties  ********
-************************************************/
+
 Book.instances = {};  // initially an empty associative array
 
-/***********************************************
-***  Class-level ("static") methods  ***********
-************************************************/
 // Convert row to object
 Book.convertRow2Obj = function (bookRow) {
   var book = new Book( bookRow);
